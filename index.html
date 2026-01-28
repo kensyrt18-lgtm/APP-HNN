@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occidente Móvil | Banco de Occidente</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #004080, #0059b3);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero button {
+      background: #ffffff;
+      color: #003366;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .hero button:hover {
+      background: #e6e6e6;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h3 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    /* Catálogo */
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .precio {
+      font-weight: bold;
+      color: #0059b3;
+      margin: 10px 0;
+    }
+
+    .card button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: #0059b3;
+    }
+
+    /* Contacto */
+    .contacto {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+
+    .contacto input,
+    .contacto textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contacto button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Occidente Móvil</h1>
+  <p>Banco de Occidente Honduras</p>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#catalogo">Servicios</a>
+    <a href="#transferencias">Transferencias</a>
+    <a href="#pagos">Pagos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Tu banco, más cerca de ti</h2>
+  <p>Gestiona tus servicios financieros de forma rápida, segura y sencilla.</p>
+  <button>Explorar servicios</button>
+</section>
+
+<section class="section" id="catalogo">
+  <h3>Catálogo de Servicios Bancarios</h3>
+
+  <div class="catalogo">
+
+    <div class="card">
+      <span class="badge">Más usado</span>
+      <h4>Transferencia ACH</h4>
+      <p>Envía dinero entre bancos de forma segura.</p>
+      <p class="precio">L 25.00</p>
+      <button>Seleccionar</button>
+    </div>
+
+    <div class="card">
+      <span class="badge">Disponible</span>
+      <h4>Transferencias a Terceros</h4>
+      <p>Envía fondos a cuentas de otros clientes.</p>
+      <p class="precio">L 15.00</p>
+      <button>Seleccionar</button>
+    </div>
+
+    <div class="card">
+      <span class="badge">Nuevo</span>
+      <h4>Pago de Servicios Públicos</h4>
+      <p>Agua, energía y telecomunicaciones.</p>
+      <p class="precio">Sin costo</p>
+      <button>Seleccionar</button>
+    </div>
+
+    <div class="card">
+      <span class="badge">Disponible</span>
+      <h4>Pago de Tarjetas</h4>
+      <p>Paga tus tarjetas de crédito fácilmente.</p>
+      <p class="precio">Sin costo</p>
+      <button>Seleccionar</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <h3>Contáctanos</h3>
+
+  <div class="contacto">
+    <input type="text" placeholder="Nombre completo">
+    <input type="email" placeholder="Correo electrónico">
+    <textarea rows="4" placeholder="Mensaje"></textarea>
+
+    <button onclick="window.open('https://wa.me/50496538272?text=Hola%20😊%20Me%20interesa%20conocer%20más%20sobre%20los%20servicios%20que%20vi%20en%20Occidente%20Móvil.%20¿Me%20confirmas%20disponibilidad%20y%20próximos%20pasos?', '_blank')">
+      Consultar por WhatsApp
+    </button>
+  </div>
